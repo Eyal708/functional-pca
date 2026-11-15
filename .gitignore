@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Environments
+.venv/
+venv/
+.conda/
+.env
+
+# Tools
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# Data: no datasets except the example data in examples/data/
+*.csv
+*.parquet
+*.pkl
+*.h5
+data/
+!examples/data/
+!examples/data/baboons_data.csv
+!examples/data/baboons_metadata.csv

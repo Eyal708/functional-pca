@@ -1,0 +1,84 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below, together with the method papers for the estimators you used."
+title: "functional-pca: functional PCA for sparse, irregular, multilevel and multivariate functional data in Python"
+type: software
+authors:
+  - given-names: Eyal
+    family-names: Haluts
+    email: eyalhaluts@mail.tau.ac.il
+version: 0.1.0
+date-released: "2026-11-11"
+license: MIT
+repository-code: "https://github.com/Eyal708/functional-pca"
+url: "https://github.com/Eyal708/functional-pca"
+keywords:
+  - functional data analysis
+  - functional principal component analysis
+  - PACE
+  - multilevel FPCA
+  - multivariate FPCA
+references:
+  - type: article
+    title: "Functional data analysis for sparse longitudinal data"
+    authors:
+      - family-names: Yao
+        given-names: Fang
+      - family-names: Müller
+        given-names: Hans-Georg
+      - family-names: Wang
+        given-names: Jane-Ling
+    journal: "Journal of the American Statistical Association"
+    volume: 100
+    issue: 470
+    start: 577
+    end: 590
+    year: 2005
+    doi: 10.1198/016214504000001745
+  - type: article
+    title: "Multilevel functional principal component analysis"
+    authors:
+      - family-names: Di
+        given-names: Chong-Zhi
+      - family-names: Crainiceanu
+        given-names: Ciprian M.
+      - family-names: Caffo
+        given-names: Brian S.
+      - family-names: Punjabi
+        given-names: Naresh M.
+    journal: "The Annals of Applied Statistics"
+    volume: 3
+    issue: 1
+    start: 458
+    end: 488
+    year: 2009
+    doi: 10.1214/08-AOAS206
+  - type: article
+    title: "Multivariate functional principal component analysis for data observed on different (dimensional) domains"
+    authors:
+      - family-names: Happ
+        given-names: Clara
+      - family-names: Greven
+        given-names: Sonja
+    journal: "Journal of the American Statistical Association"
+    volume: 113
+    issue: 522
+    start: 649
+    end: 659
+    year: 2018
+    doi: 10.1080/01621459.2016.1273115
+  - type: article
+    title: "Principal components for multivariate functional data"
+    authors:
+      - family-names: Berrendero
+        given-names: José R.
+      - family-names: Justel
+        given-names: Ana
+      - family-names: Svarc
+        given-names: Marcela
+    journal: "Computational Statistics & Data Analysis"
+    volume: 55
+    issue: 9
+    start: 2619
+    end: 2634
+    year: 2011
+    doi: 10.1016/j.csda.2011.03.011
