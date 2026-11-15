@@ -71,10 +71,10 @@ out here explicitly because it is a common source of confusion:
 
 Implementation approach
 ------------------------------------------------------------------
-This module works directly with FDApy's low-level, general-purpose
-smoothing primitives (``FDApy.preprocessing.smoothing.local_polynomial.
-LocalPolynomial`` and, optionally, ``FDApy.preprocessing.smoothing.
-psplines.PSplines``) rather than a higher-level functional-data API.
+This module works directly with low-level, general-purpose smoothing
+primitives -- the ``LocalPolynomial`` and ``PSplines`` smoothers of FDApy
+(Golovkine), included in :mod:`fpca._smoothing` under FDApy's MIT License --
+rather than a higher-level functional-data API.
 Raw mean/covariance pooling, diagonal exclusion, sample weighting, the
 trapezoidal-quadrature eigendecomposition, and component-count
 bookkeeping are all implemented directly in this module, which keeps
@@ -132,9 +132,9 @@ import warnings
 from typing import List, Optional, Tuple
 
 import numpy as np
-from FDApy.preprocessing.smoothing.local_polynomial import LocalPolynomial
-from FDApy.preprocessing.smoothing.psplines import PSplines
 from numpy.linalg import eigh, solve
+
+from ._smoothing import LocalPolynomial, PSplines
 
 __all__ = ["PACE"]
 

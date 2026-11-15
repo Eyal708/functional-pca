@@ -8,7 +8,7 @@ Please open an issue with:
 
 - a small, self-contained example that reproduces it (simulated data is ideal),
 - what you expected and what happened instead (full traceback for errors),
-- your Python version and the versions of `numpy`, `scipy`, `scikit-learn` and `FDApy`.
+- your Python version and the versions of `numpy`, `scipy`, `scikit-learn`, `pandas` and `matplotlib`.
 
 For numerical questions ("the eigenfunctions look wrong"), it helps to include the observation design: number of curves, observations per curve, and whether the times are shared or irregular.
 

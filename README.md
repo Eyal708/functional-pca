@@ -35,7 +35,7 @@ cd functional-pca
 pip install -e ".[examples]"     # editable install + notebook dependencies
 ```
 
-Runtime dependencies are NumPy, SciPy, scikit-learn, pandas, Matplotlib and FDApy (`requirements.txt` lists them for `pip install -r`). The `examples` extra adds Jupyter and scikit-fda, used only to download a public dataset. The `dev` extra adds pytest and ruff.
+Runtime dependencies are NumPy (1.x or 2.x), SciPy, scikit-learn, pandas and Matplotlib (`requirements.txt` lists them for `pip install -r`). The `examples` extra adds Jupyter, for the example notebook. The `dev` extra adds pytest and ruff.
 
 ## Quick start
 
@@ -203,7 +203,7 @@ The [`examples/`](examples) folder contains Jupyter notebooks that walk through 
 - [`fdapace`](https://github.com/functionaldata/tPACE) (R): the reference PACE implementation by the original authors.
 - [`MFPCA`](https://cran.r-project.org/package=MFPCA) (R): reference implementation of Happ & Greven (2018).
 - [`refund`](https://cran.r-project.org/package=refund) (R): includes multilevel FPCA (`mfpca.sc`).
-- [`FDApy`](https://github.com/StevenGolovkine/FDApy) and [`scikit-fda`](https://github.com/GAA-UAM/scikit-fda) (Python): general functional data analysis toolkits. This package uses FDApy's smoothers.
+- [`FDApy`](https://github.com/StevenGolovkine/FDApy) and [`scikit-fda`](https://github.com/GAA-UAM/scikit-fda) (Python): general functional data analysis toolkits. This package includes FDApy's local-polynomial and P-spline smoothers (see Acknowledgements).
 
 ## Citing
 
@@ -223,7 +223,7 @@ If you use this package in published work, please cite the method papers below f
 
 ## Acknowledgements
 
-Local-polynomial and P-spline smoothing use [FDApy](https://github.com/StevenGolovkine/FDApy) (MIT). Default PACE bandwidths follow [`fdapace`](https://github.com/functionaldata/tPACE). Numerical work relies on NumPy, SciPy and scikit-learn; plots use Matplotlib.
+The local-polynomial and P-spline smoothers are taken from [FDApy](https://github.com/StevenGolovkine/FDApy) 1.0.3 by Steven Golovkine (MIT License). They are included in [`src/fpca/_smoothing.py`](src/fpca/_smoothing.py) with FDApy's copyright and license notice, so that `fpca` does not depend on FDApy's `numpy<2` requirement; the only change to the code is replacing the `np.float_` alias, removed in NumPy 2, by `np.float64`. Default PACE bandwidths follow [`fdapace`](https://github.com/functionaldata/tPACE). Numerical work relies on NumPy, SciPy and scikit-learn; plots use Matplotlib.
 
 ## Contributing and license
 

@@ -16,6 +16,8 @@ All notable changes to this project are documented here. The format follows [Kee
 - `pandas` as a runtime dependency.
 
 ### Changed
+- The local-polynomial and P-spline smoothers of FDApy 1.0.3 (MIT License, Steven Golovkine) are now included in `fpca._smoothing` with their license notice, and FDApy is no longer a dependency. FDApy requires `numpy<2`; `fpca` now works with NumPy 1.x and 2.x. Results are unchanged (tests compare the included smoothers with FDApy's).
+- The `examples` extra no longer installs scikit-fda, which no example uses.
 - `PACE(n_grid_points=None)` (the default) now uses the union of all observed times as the evaluation grid, with no cap, so no observation is binned; a `UserWarning` is raised above 2000 grid points. `method_smoothing="LP"` keeps its 50-point default cap. The constructor no longer rewrites `n_grid_points`. Times off the grid are handled by linear interpolation; times outside the fitted range raise unless `allow_extrapolation=True`.
 - `PACE.fit` accepts curves with a single observation: they inform the mean and the noise variance, a `UserWarning` reports how many there are, and an error is raised only if no curve has two observations. `TwoLevelPACE` accepts them as well.
 - `MFPCA` reduces the default of 5 univariate components per feature silently; only an explicit `n_components_per_feature` that exceeds the available components warns.
