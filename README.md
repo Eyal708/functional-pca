@@ -19,6 +19,8 @@ It also ships plotting helpers (modes of variation, scores, reconstructions, eig
 
 The code is domain-agnostic: a "curve" can be a patient's lab values over time, a sensor signal over a day, a growth curve, a spectrum, or any other one-dimensional function observed with noise.
 
+For an introduction to functional data analysis and functional PCA, see Ramsay & Silverman (2005); the method papers of each estimator are listed under [References](#references).
+
 ---
 
 ## Installation
@@ -211,6 +213,7 @@ If you use this package in published work, please cite the method papers below f
 
 ## References
 
+- Ramsay, J. O., & Silverman, B. W. (2005). *Functional Data Analysis* (2nd ed.). Springer. https://doi.org/10.1007/b98888
 - Yao, F., Müller, H.-G., & Wang, J.-L. (2005). Functional data analysis for sparse longitudinal data. *Journal of the American Statistical Association*, 100(470), 577–590. https://doi.org/10.1198/016214504000001745
 - Di, C.-Z., Crainiceanu, C. M., Caffo, B. S., & Punjabi, N. M. (2009). Multilevel functional principal component analysis. *The Annals of Applied Statistics*, 3(1), 458–488. https://doi.org/10.1214/08-AOAS206
 - Happ, C., & Greven, S. (2018). Multivariate functional principal component analysis for data observed on different (dimensional) domains. *Journal of the American Statistical Association*, 113(522), 649–659. https://doi.org/10.1080/01621459.2016.1273115
