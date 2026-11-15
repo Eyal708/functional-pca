@@ -5,6 +5,7 @@
 [![Tests](https://github.com/Eyal708/functional-pca/actions/workflows/tests.yml/badge.svg)](https://github.com/Eyal708/functional-pca/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Eyal708/functional-pca/blob/main/examples/baboon_microbiome.ipynb)
 
 `functional-pca` (imported as `fpca`) is a small, dependency-light library of FPCA estimators that work directly on raw `(times, values)` observations, with no pre-smoothing or interpolation onto a common grid:
 
@@ -184,6 +185,8 @@ All plotting functions return `(fig, axes)` and never call `plt.show()`, so figu
 ## Examples
 
 The [`examples/`](examples) folder contains Jupyter notebooks that walk through each estimator end to end, with figures and interpretation. [`baboon_microbiome.ipynb`](examples/baboon_microbiome.ipynb) applies `PACE`, `TwoLevelPACE`, `MFPCA` and multilevel MFPCA to the gut microbiome of wild baboons (Björk et al., 2022), with the data in `examples/data/`.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Eyal708/functional-pca/blob/main/examples/baboon_microbiome.ipynb) runs the notebook in the browser with nothing to install: its first cell installs `fpca` from GitHub and reads the data from this repository. To run it locally instead, clone the repository and install it with `pip install -e ".[examples]"`, then open the notebook in Jupyter or VS Code.
 
 ## Implementation notes
 
