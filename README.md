@@ -1,13 +1,15 @@
 # functional-pca
 
-**Functional principal component analysis in Python for sparse, irregular, multilevel and multivariate functional data.**
+**Functional principal component analysis in Python for sparse, irregular, multilevel and multivariate longitudinal data.**
 
 [![Tests](https://github.com/Eyal708/functional-pca/actions/workflows/tests.yml/badge.svg)](https://github.com/Eyal708/functional-pca/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Eyal708/functional-pca/blob/main/examples/baboon_microbiome.ipynb)
 
-`functional-pca` (imported as `fpca`) is a small, dependency-light library of FPCA estimators that work directly on raw `(times, values)` observations, with no pre-smoothing or interpolation onto a common grid:
+`functional-pca` (imported as `fpca`) is a small, dependency-light library of Functional PCA (FPCA) estimators that work directly on raw `(times, values)` observations. Click **Open in Colab** above for a notebook demonstrating library usage on real data. 
+
+The library contains three estimators, each implementing a different variation of FPCA:
 
 | Estimator | What it does | Reference |
 |---|---|---|
@@ -15,11 +17,11 @@
 | `TwoLevelPACE` | Multilevel FPCA for repeated curves per subject (e.g. several visits or days per person). Splits variation into a *between-subject* and a *within-subject* level, each with its own eigenfunctions and scores. | Di, Crainiceanu, Caffo & Punjabi (2009) |
 | `MFPCA` | Multivariate FPCA for several signals observed on the same subjects. It finds joint components across signals, built from one fitted `PACE` model per signal, or from the scores of one level of a `TwoLevelPACE` model per signal (multilevel MFPCA). | Happ & Greven (2018); Berrendero, Justel & Svarc (2011) |
 
-It also ships plotting helpers (modes of variation, scores, reconstructions, eigenfunctions of several features, multivariate eigenfunctions), utilities (variance shares, component selection, reconstruction error, sign orientation of eigenfunctions, long-table-to-curves conversion) and a fast PERMANOVA/PERMDISP permutation test for comparing groups of curves in score space.
+The library also includes plotting helpers, utilities, and PERMANOVA/PERMDISP tests for comparing groups of curves in score space.
 
-The code is domain-agnostic: a "curve" can be a patient's lab values over time, a sensor signal over a day, a growth curve, a spectrum, or any other one-dimensional function observed with noise.
+The code is domain-agnostic: a "curve" can be a patient's lab values over time, a sensor signal over a day, a growth curve, or any other one-dimensional function observed in discrete time points with noise.
 
-For an introduction to functional data analysis and functional PCA, see Ramsay & Silverman (2005); the method papers of each estimator are listed under [References](#references).
+For an introduction to Functional Data Analysis (FDA) and Functional PCA, see Ramsay & Silverman (2005); the method papers of each estimator are listed under [References](#references).
 
 ---
 
