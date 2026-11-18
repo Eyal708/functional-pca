@@ -230,8 +230,11 @@ If you use this package in published work, please cite the method papers below f
 
 The local-polynomial and P-spline smoothers are taken from [FDApy](https://github.com/StevenGolovkine/FDApy) 1.0.3 by Steven Golovkine (MIT License). They are included in [`src/fpca/_smoothing.py`](src/fpca/_smoothing.py) with FDApy's copyright and license notice, so that `fpca` does not depend on FDApy's `numpy<2` requirement; the only change to the code is replacing the `np.float_` alias, removed in NumPy 2, by `np.float64`. Default PACE bandwidths follow [`fdapace`](https://github.com/functionaldata/tPACE). Numerical work relies on NumPy, SciPy and scikit-learn; plots use Matplotlib.
 
-This package was developed with the assistance of [Claude Code](https://claude.com/claude-code) (Anthropic).
+## Contributing and Contact
 
-## Contributing and license
+Bug reports, questions and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+I'd love to hear your feedback! For any questions, suggestions or ideas about this work, you can also contact me directly at eyalhaluts@mail.tau.ac.il.
 
-Bug reports, questions and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). Released under the [MIT License](LICENSE).
+## License
+
+Released under the [MIT License](LICENSE). 
